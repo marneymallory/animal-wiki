@@ -1,33 +1,21 @@
-$(document).ready(function() {
-  const id = (prompt("what animal do you want to learn about?").val());
-
-  $("form#animals").submit(function(event) {
-    const animal = ("input#animal").val();
-    $("#unicorn").text();
-
+$(document).ready(function(){
   
+  $("#animal-form").submit(function(event){
+    // now the form is submited
+    const unicorn = $("#unicorn")[0];
+    const dragon = $("#dragon")[0];
+    const bigfoot = $("#bigfoot")[0];
+    
+    if(unicorn.selected === true){
+      $(".unicorn").show()
+    }
+    if(dragon.selected === true){
+      $(".dragon").show()
+    }
+    if(bigfoot.selected === true){
+      $(".bigfoot").show()
+    }
+
     event.preventDefault();
-  })}
-
-  
-    // (".clickable").click(function() {
-  //   (".unicorn-showing").toggle();
-  //   (".unicorn-hidden").toggle();
-  //   });
-  //   if (id === "unicorn") {
-  //     $("#unicorn").show();
-  //   }
-  //   (".clickable").click(function() {
-  //     (".dragon-showing").toggle();
-  //     (".dragon-hidden").toggle();
-  //   });
-  //   if (id === "dragon") {
-  //     $("#dragon").show();
-  //   }
-  //   (".clickable").click(function() {
-  //     (".bigfoot-showing").toggle();
-  //     (".bigfoot-hidden").toggle();
-  //   });
-  // if (id === "bigfoot") {
-  //     $("bigfoot").show();
-  // 
+  });
+});
